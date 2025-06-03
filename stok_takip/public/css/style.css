@@ -1,0 +1,259 @@
+/* public/css/style.css */
+
+/* AdminLTE ile birlikte kullanılacak özel stil dosyası */
+.wrapper {
+    min-height: 100vh;
+}
+
+.main-header {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.main-sidebar {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+}
+
+.sidebar {
+    padding-top: 0;
+}
+
+.brand-link {
+    display: flex;
+    align-items: center;
+    padding: 0.8125rem 0.5rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    background-color: #343a40;
+    color: rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid #4b545c;
+}
+
+.brand-image {
+    float: left;
+    line-height: .8;
+    margin-left: 0.8rem;
+    margin-right: 0.5rem;
+    margin-top: -3px;
+    max-height: 33px;
+    width: auto;
+}
+
+.content-wrapper {
+    margin-left: 250px;
+    padding: 20px;
+    background-color: #f4f6f9;
+    min-height: calc(100vh - 57px);
+}
+
+.main-footer {
+    margin-left: 250px;
+    padding: 15px;
+    color: #869099;
+    border-top: 1px solid #dee2e6;
+    background-color: #fff;
+}
+
+/* Mobil ekranlarda sidebar */
+@media (max-width: 991.98px) {
+    .content-wrapper, .main-footer {
+        margin-left: 0;
+    }
+    
+    .main-sidebar {
+        transform: translate(-250px, 0);
+        transition: transform .3s ease-in-out, width .3s ease-in-out;
+    }
+    
+    .sidebar-open .main-sidebar {
+        transform: translate(0, 0);
+    }
+}
+
+/* Form ve tablo stilleri */
+.form-group.required label:after {
+    content: " *";
+    color: red;
+}
+
+.table .actions {
+    white-space: nowrap;
+}
+
+/* Alert mesajları */
+.alert-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1050;
+    max-width: 350px;
+}
+
+.alert-dismissible {
+    padding-right: 35px;
+}
+
+.alert-dismissible .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.75rem 1.25rem;
+    color: inherit;
+}
+
+/* Card stilleri */
+.card {
+    margin-bottom: 20px;
+    box-shadow: 0 0 1px rgba(0,0,0,.125), 0 1px 3px rgba(0,0,0,.2);
+}
+
+.card-header {
+    background-color: transparent;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    padding: 0.75rem 1.25rem;
+    position: relative;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+
+.card-title {
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+/* Dashboard istatistik kutuları */
+.small-box {
+    border-radius: 0.25rem;
+    box-shadow: 0 0 1px rgba(0,0,0,.125), 0 1px 3px rgba(0,0,0,.2);
+    display: block;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.small-box > .inner {
+    padding: 10px;
+}
+
+.small-box h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.small-box p {
+    font-size: 1rem;
+}
+
+.small-box .icon {
+    color: rgba(0,0,0,.15);
+    z-index: 0;
+}
+
+.small-box .icon > i {
+    font-size: 70px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    transition: all .3s linear;
+}
+
+.small-box:hover .icon > i {
+    font-size: 75px;
+}
+
+.small-box > .small-box-footer {
+    background-color: rgba(0,0,0,.1);
+    color: rgba(255,255,255,.8);
+    display: block;
+    padding: 3px 0;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    z-index: 10;
+}
+
+.small-box > .small-box-footer:hover {
+    background-color: rgba(0,0,0,.15);
+    color: #fff;
+}
+
+.bg-info {
+    background-color: #17a2b8!important;
+    color: #fff!important;
+}
+
+.bg-success {
+    background-color: #28a745!important;
+    color: #fff!important;
+}
+
+.bg-warning {
+    background-color: #ffc107!important;
+    color: #1f2d3d!important;
+}
+
+.bg-danger {
+    background-color: #dc3545!important;
+    color: #fff!important;
+}
+
+/* Form input stilleri */
+.custom-file-input:lang(en)~.custom-file-label::after {
+    content: "Gözat";
+}
+
+.custom-file-label {
+    overflow: hidden;
+}
+
+/* Ürün resmi önizleme */
+.product-image-preview {
+    max-width: 150px;
+    max-height: 150px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+/* Kullanıcı durumu */
+.user-status {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.user-status.active {
+    background-color: #28a745;
+}
+
+.user-status.inactive {
+    background-color: #dc3545;
+}
+
+/* Fatura detayları tablosu */
+.invoice-details-table tbody tr:last-child {
+    font-weight: bold;
+    background-color: #f8f9fa;
+}
+
+/* Fatura yazdırma */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    .content-wrapper {
+        margin-left: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .main-footer {
+        display: none;
+    }
+}
